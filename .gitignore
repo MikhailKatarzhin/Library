@@ -1,1 +1,18 @@
-pg_data
+# IDE's dirrectories.
+/.idea/
+
+# Folder for dependencies.
+/vendor/
+
+# Folder for experiments.
+**/sandbox/
+
+# Folders with local postgress data.
+**/pg_data/
+
+# Compiled protobuf.
+*.pb.go
+
+# Generated mocks.
+**/mocks/
+
