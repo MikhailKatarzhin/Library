@@ -1,4 +1,5 @@
-package author
+// Package id implements id that use in book and its entity.
+package id
 
 import (
 	"crypto/rand"
