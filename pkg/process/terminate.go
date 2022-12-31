@@ -6,7 +6,7 @@ import (
 
 	"go.uber.org/zap"
 
-	"gitlab.wildberries.ru/wb-branches/wb-branches/backend/wb-branches/pkg/logger"
+	"github.com/MikhailKatarzhin/Library/pkg/logger"
 )
 
 // Terminate its application gratefully.

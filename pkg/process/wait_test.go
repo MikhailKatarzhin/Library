@@ -8,7 +8,7 @@ import (
 
 	. "github.com/onsi/gomega"
 
-	"gitlab.wildberries.ru/wb-branches/wb-branches/backend/wb-branches/pkg/process"
+	"github.com/MikhailKatarzhin/Library/pkg/process"
 )
 
 func TestWaitForTermination(t *testing.T) {
