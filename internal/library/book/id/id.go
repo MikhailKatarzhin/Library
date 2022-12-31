@@ -11,12 +11,13 @@ import (
 	"github.com/MikhailKatarzhin/Library/pkg/process"
 )
 
+const int64ByteCount = 8
+
 type ID uint64
 
 func NewID() ID {
-	b := make([]byte, 8)
-	_, err := rand.Read(b)
-	if err != nil {
+	b := make([]byte, int64ByteCount)
+	if _, err := rand.Read(b); err != nil {
 		logger.I().Error("can not to generate author id", zap.Error(err))
 		process.Terminate()
 	}

@@ -21,6 +21,8 @@ var (
 )
 
 // I is the alias for more convenient using.
+//
+//nolint:gochecknoglobals
 var I = MustGetLogger
 
 // GetLogger is the provider for zap.Logger.
