@@ -49,8 +49,12 @@ func NewHTTPServer(
 	return result
 }
 
-func (s *HTTPServer) Start() error {
-	return s.serv.ListenAndServe() //nolint:wrapcheck
+func (s *HTTPServer) Start() {
+	go func() {
+		if err := s.serv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			logger.I().Error("failed to start http server", zap.Error(err))
+		}
+	}()
 }
 
 func (s *HTTPServer) Close() error {

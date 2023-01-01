@@ -4,6 +4,9 @@ help: ## Show this help.
 ## --------------------------------------------------------------------------
 	@sed -ne '/@sed/!s/## //p' $(MAKEFILE_LIST)
 
+run: ##              Run the application.
+	go run ./cmd/main.go
+
 ci: ##               Run CI local, needs docker.
 	make lint_docker
 	make test_with_docker
