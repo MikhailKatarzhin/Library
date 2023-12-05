@@ -6,7 +6,7 @@ import (
 )
 
 type BookInfo struct {
-	authors     []id.ID //nolint:unused // Use it later.
+	authors     []*id.ID //nolint:unused // Use it later.
 	Title       string
 	Description string
 }

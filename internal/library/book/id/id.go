@@ -4,7 +4,6 @@ package id
 import (
 	"crypto/rand"
 	"encoding/binary"
-
 	"go.uber.org/zap"
 
 	"github.com/MikhailKatarzhin/Library/pkg/logger"
@@ -18,7 +17,7 @@ type ID uint64
 func NewID() ID {
 	b := make([]byte, int64ByteCount)
 	if _, err := rand.Read(b); err != nil {
-		logger.I().Error("can not to generate author id", zap.Error(err))
+		logger.I().Error("can not to generate id", zap.Error(err))
 		process.Terminate()
 	}
 
